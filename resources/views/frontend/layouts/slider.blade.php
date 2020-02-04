@@ -1,8 +1,5 @@
 <section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 nopadding">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<!-- <ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
@@ -26,7 +23,7 @@
 									<div class="item">
 								<?php } ?>
 								
-								<div class="col-sm-12">
+								<div class="slide-img">
 								<img src="{{ asset('images/slider/' . $slider->image) }}" style="max-width:100%;">
 								</div>
 							</div>
@@ -40,8 +37,4 @@
 							<i class="fa fa-angle-right"></i>
 						</a>
 					</div>
-					
-				</div>
-			</div>
-		</div>
 	</section><!--/slider-->

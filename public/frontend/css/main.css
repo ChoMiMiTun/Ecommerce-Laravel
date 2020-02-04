@@ -1,4 +1,5 @@
-﻿/*************************
+﻿v
+/*************************
 *******Typography******
 **************************/
 
@@ -218,8 +219,9 @@ a#scrollUp i {
 }
 
 .header-bottom {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    background: #031D3F;
 }
 
 .navbar-collapse.collapse {
@@ -241,7 +243,7 @@ a#scrollUp i {
     font-size: 17px;
     font-weight: 300;
     padding: 0;
-    padding-bottom: 10px;
+    padding: 5px 0;
 }
 
 .mainmenu ul li a:hover,
@@ -342,7 +344,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
-    background: #F0F0E9;
+    background: #031D3F;
 }
 
 .footer-top .container {
@@ -564,6 +566,11 @@ ul.sub-menu {
     padding-bottom: 45px;
 }
 
+#slider img {
+    width: 100%;
+    height: 480px;
+}
+
 .carousel-indicators li {
     background: #C4C4BE;
 }
@@ -648,13 +655,6 @@ ul.sub-menu {
     left: 30px;
 }
 
-.category-products {
-    border: 1px solid #F7F7F0;
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    padding-top: 15px;
-}
-
 .left-sidebar h2,
 .brands_products h2 {
     color: #FE980F;
@@ -705,7 +705,7 @@ h2.title:before {
 }
 
 .category-products .panel {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     border: 0px;
     border-radius: 0px;
     box-shadow: none;
@@ -2451,4 +2451,21 @@ textarea {
 .nopadding {
     padding-left: 0;
     padding-right: 0;
+}
+
+.panel {
+    background: transparent;
+}
+
+.panel-heading {
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+.nav-stacked>li {
+    margin: 1px 0;
+}
+
+.single-products img {
+    width: 100%;
 }

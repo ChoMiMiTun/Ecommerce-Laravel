@@ -96,14 +96,12 @@
                                 <input type="text" class="form-control" id="product_color" name="product_color">
                             </div>
                         </div>
-                        <div class="form-group row mt-3">
-                            <label class="col-md-2">Public Status</label>
-                            <div class="col-md-4">
-                                <select class="form-control select2" style="width: 100%;" name="public_status">
-                                    <option selected="selected">Select Status</option>
-                                    <option>Public</option>
-                                    <option>Unpublic</option>
-                                </select>
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <label class="form-check-label" for="check">Public Status</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="checkbox" class="form-check-input" id="check" name="public_status" value="1" style="margin-left:2px;">
                             </div>
                         </div>
                     </div>

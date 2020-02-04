@@ -41,27 +41,23 @@
                                 <td><img src="{{ asset('images/products/' . $product->product_image) }}" style="width:100px;"></td>
                                 <td>{!! $product->product_name !!}</td>
                                 <td>{{ $product->product_price }}</td>
-                                <td>{{ $product->category_id }}</td>
-                                <td>{{ $product->manufacture_id }}</td>
+                                <td>{{ $product->category->title }}</td>
+                                <td>{{ $product->manufacture->manufacture_name }}</td>
                                 <td>{{ $product->created_at->format('d/m/Y') }}</td>
                                 <td>
-                                    @if(($product->public_status) == 'unpublic')
-                                    <a class="btn btn-success btn-sm" href="{{ url("admin/unactive_product/$product->id") }}">
-                                        active
-                                    </a>
-                                    @else
-                                    <a class="btn btn-secondary btn-sm" href="{{ url("admin/active_product/$product->id") }}">
-                                        unactive
-                                    </a>
-                                    @endif
+                                    @if(($product->public_status) == 1)
+                                        <span class="btn btn-xs btn-success">Active</span>
+                                        @else
+                                        <span class="btn btn-xs btn-secondary">Unactive</span>
+                                        @endif
                                 </td>
                                 <td>
-                                    @if(($product->public_status) == 'unpublic')
+                                    @if(($product->public_status) == 1)
                                     <a class="btn btn-success btn-sm" href="{{ url("admin/unactive_product/$product->id") }}">
                                         <i class="fas fa-toggle-on"></i>
                                     </a>
                                     @else
-                                    <a class="btn btn-secondary btn-sm" href="{{ url("admin/active_product/$product->id") }}">
+                                    <a class="btn btn-danger btn-sm" href="{{ url("admin/active_product/$product->id") }}">
                                         <i class="fas fa-toggle-off"></i>
                                     </a>
                                     @endif

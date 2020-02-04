@@ -72,17 +72,7 @@
                             </div>
                         </div>
 
-                        <!-- <div class="box-profile">
-                                        <div class="text-center">
-                                            <img class="profile-user-img img-fluid img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
-                                        </div>
-
-                                        <h3 class="profile-username text-center">Nina Mcintire</h3>
-
-                                    </div> -->
-
                         <div class="form-group row mt-2">
-
                             <div class="col-md-2">Image</div>
                             <div class="col-md-4">
                                 <img class="profile-user-img img-fluid" src="{{  asset('images/products/' . $product->product_image) }}" alt="" style="width: 400px;">
@@ -113,19 +103,12 @@
                         </div>
                         <div class="form-group row mt-3">
                             <label class="col-md-2">Public Status</label>
-                            <div class="col-md-4">
-                                <select class="form-control select2" style="width: 100%;" name="public_status"
-                                @if(($product->public_status) == 'public')
-                                    Public
-                                    else
-                                    Unpublic
+                            <div class="col-md-10">
+                                <input type="checkbox" class="form-check-input" id="check" name="status" value="1" style="margin-left:2px;"
+                                @if($product->public_status == 1 )
+                                checked
                                 @endif
                                 >
-                                    <option selected="selected">Select Status</option>
-
-                                    
-
-                                </select>
                             </div>
                         </div>
                     </div>

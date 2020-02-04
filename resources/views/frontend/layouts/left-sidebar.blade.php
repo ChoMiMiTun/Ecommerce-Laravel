@@ -3,13 +3,20 @@
         <h2>Category</h2>
         <div class="panel-group category-products" id="accordian">
             <!--category-productsr-->
-
+            
             <div class="panel panel-default">
+                <?php
+                $publiced_category = DB::table('categories')
+                                    ->where('status', 1)
+                                    ->get();
+
+                foreach($publiced_category as $cat) { ?>
+                
                 <div class="panel-heading">
-
-                    <h4 class="panel-title"><a href="#">vv</a></h4>
-
+                <p class="panel-title"><a href="#">{{ $cat->title }}</a></p>  
                 </div>
+ 
+            <?php } ?>
             </div>
         </div>
     </div>
@@ -19,17 +26,21 @@
         <!--brands_products-->
         <h2>Brands</h2>
         <div class="brands-name">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-            </ul>
+
+                <?php
+                    $publiced_manufacture = DB::table('manufactures')
+                                        ->where('public_status', 1)
+                                        ->get();
+
+                    foreach($publiced_manufacture as $manuf) { ?>
+                    
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="#">{{ $manuf->manufacture_name }}</a></li> 
+
+                <?php } ?>
+
+            </div>
         </div>
-    </div>
     <!--/brands_products-->
 
     <div class="price-range">
